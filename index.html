@@ -4,153 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Эренцен Нусхаев — DevOps-инженер</title>
-<meta name="description" content="Резюме: DevOps-инженер (Junior). Linux, Ansible, Docker, Zabbix, Kubernetes.">
 <style>
-  :root{
-    --bg:#f5f6f8; --card:#ffffff; --text:#1f2430; --muted:#5b6472;
-    --accent:#0b66c3; --accent2:#0d8a5f; --line:#e4e8ee; --chip:#eef4fb;
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #9198a1;
+    --accent: #58a6ff;
+    --accent2: #7ee787;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:"Segoe UI","PT Sans",Arial,sans-serif;
-    background:var(--bg); color:var(--text); line-height:1.55;
-    -webkit-font-smoothing:antialiased;
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
   }
-  .wrap{max-width:860px;margin:0 auto;padding:32px 20px 64px}
-  header.hero{
-    background:linear-gradient(135deg,#0b3d6b 0%,#0b66c3 60%,#0d8a5f 130%);
-    color:#fff;border-radius:16px;padding:36px 36px 30px;margin-bottom:28px;
-    box-shadow:0 8px 24px rgba(11,102,195,.18);
-  }
-  header.hero h1{font-size:2rem;letter-spacing:.3px}
-  header.hero .role{font-size:1.1rem;font-weight:600;margin-top:4px;color:#dcecff}
-  header.hero .contacts{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.95rem}
-  header.hero a{color:#eaf4ff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
-  header.hero a:hover{border-bottom-color:#fff}
-  section{background:var(--card);border-radius:14px;padding:24px 28px;margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(31,36,48,.06)}
-  h2{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
-    margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
-  .item{margin-bottom:18px}
-  .item:last-child{margin-bottom:0}
-  .item .head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px}
-  .item h3{font-size:1.05rem}
-  .item .org{color:var(--muted);font-size:.95rem;margin-top:2px}
-  .item .date{color:var(--muted);font-size:.9rem;white-space:nowrap}
-  ul{margin:8px 0 0 20px}
-  li{margin-bottom:5px}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-  .chip{background:var(--chip);color:#134a80;border-radius:999px;padding:4px 12px;font-size:.85rem}
-  .skills .row{margin-bottom:12px}
-  .skills .row:last-child{margin-bottom:0}
-  .skills b{display:block;margin-bottom:3px}
-  .skills .val{color:var(--muted)}
-  a.link{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(11,102,195,.35)}
-  a.link:hover{border-bottom-color:var(--accent)}
-  .tag{display:inline-block;font-size:.8rem;color:var(--muted);margin-top:4px}
-  footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:8px}
-  @media (max-width:560px){
-    header.hero{padding:26px 22px}
-    section{padding:20px 18px}
-  }
-  @media print{
-    body{background:#fff}
-    .wrap{max-width:100%;padding:0}
-    header.hero{border-radius:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    section{box-shadow:none;border:1px solid var(--line);border-radius:0;page-break-inside:avoid}
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 60px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 1.9em; font-weight: 700; letter-spacing: -0.5px; }
+  .role { color: var(--accent); font-size: 1.05em; margin-top: 4px; font-weight: 600; }
+  .stack { color: var(--muted); margin-top: 2px; }
+  .contacts { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.92em; }
+  .contacts a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
+  .contacts a:hover { color: var(--accent); border-color: var(--accent); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; }
+  h2 { font-size: 0.82em; text-transform: uppercase; letter-spacing: 1.4px; color: var(--accent2); margin-bottom: 14px; }
+  h3 { font-size: 1.05em; margin-bottom: 2px; }
+  .sub { color: var(--muted); font-size: 0.92em; margin-bottom: 10px; }
+  .sub b { color: var(--text); font-weight: 600; }
+  ul { margin: 6px 0 0 18px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .skill { margin-bottom: 6px; }
+  .skill b { color: var(--accent2); font-weight: 600; }
+  .item { margin-bottom: 22px; }
+  .item:last-child { margin-bottom: 0; }
+  p { margin-bottom: 8px; }
+  .muted { color: var(--muted); }
+  footer { text-align: center; color: var(--muted); font-size: 0.85em; margin-top: 30px; }
+  @media (max-width: 520px) {
+    .wrap { padding: 20px 14px 40px; }
+    .section { padding: 16px; }
+    h1 { font-size: 1.5em; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="hero">
+<header>
   <h1>Эренцен Нусхаев</h1>
-  <div class="role">DevOps-инженер (Junior) · Linux, Ansible, Docker, Zabbix</div>
+  <div class="role">DevOps-инженер (Junior)</div>
+  <div class="stack">Linux · Ansible · Docker · Zabbix</div>
   <div class="contacts">
-    <span><a href="tel:+79615411280">+7 (961) 541-12-80</a></span>
-    <span><a href="mailto:enuskhaev@yandex.ru">enuskhaev@yandex.ru</a></span>
-    <span><a href="https://t.me/yomusfu">Telegram: @yomusfu</a></span>
-    <span><a href="https://github.com/yomusfu">github.com/yomusfu</a></span>
-    <span>Москва</span>
+    <a href="tel:+79615411280">+7 (961) 541-12-80</a>
+    <a href="mailto:enuskhaev@yandex.ru">enuskhaev@yandex.ru</a>
+    <a href="https://t.me/yomusfu">Telegram: @yomusfu</a>
+    <a href="https://github.com/yomusfu">github.com/yomusfu</a>
+    <span class="muted">Москва</span>
   </div>
 </header>
 
-<section>
+<section class="section">
   <h2>Обо мне</h2>
-  <p>Специалист по ИТ и информационной безопасности, целенаправленно развиваюсь в DevOps.
-  Строю стенды мониторинга с нуля: автоматизация развёртывания через Ansible, кастомный
-  мониторинг Nginx в Zabbix с оповещениями в Telegram. Опыт администрирования Linux и работы
-  с ИТ-инфраструктурой в федеральном ведомстве. Ключевые проекты —
-  <a class="link" href="https://github.com/yomusfu">github.com/yomusfu</a>.</p>
+  <p>Специалист по ИТ и информационной безопасности, целенаправленно развиваюсь в DevOps. Строю стенды мониторинга с нуля: автоматизация развёртывания через Ansible, кастомный мониторинг Nginx в Zabbix с оповещениями в Telegram. Опыт администрирования Linux и работы с ИТ-инфраструктурой в федеральном ведомстве.</p>
+  <p class="muted">Ключевые проекты: <a href="https://github.com/yomusfu">github.com/yomusfu</a></p>
 </section>
 
-<section class="skills">
+<section class="section">
   <h2>Навыки</h2>
-  <div class="row"><b>Автоматизация и IaC</b><span class="val">Ansible (роли, Jinja2, ansible-vault), Git, Bash, YAML</span></div>
-  <div class="row"><b>Контейнеры и оркестрация</b><span class="val">Docker, Docker Compose, Kubernetes (базово)</span></div>
-  <div class="row"><b>Мониторинг</b><span class="val">Zabbix (LLD, кастомные шаблоны, триггеры), Grafana, Prometheus (изучаю)</span></div>
-  <div class="row"><b>ОС и серверы</b><span class="val">Linux (Debian, Ubuntu), администрирование серверов, Nginx, PostgreSQL</span></div>
-  <div class="row"><b>Сети</b><span class="val">TCP/IP, VLAN, VPN, администрирование сетевого оборудования</span></div>
-  <div class="row"><b>Базы данных и прочее</b><span class="val">SQL, Python (базовый), техническая поддержка пользователей</span></div>
+  <div class="skill"><b>Автоматизация и IaC:</b> Ansible (роли, Jinja2, ansible-vault), Git, Bash, YAML</div>
+  <div class="skill"><b>Контейнеры и оркестрация:</b> Docker, Docker Compose, Kubernetes (базово)</div>
+  <div class="skill"><b>Мониторинг:</b> Zabbix (LLD, кастомные шаблоны, триггеры), Grafana, Prometheus (изучаю)</div>
+  <div class="skill"><b>ОС и серверы:</b> Linux (Debian, Ubuntu), администрирование серверов, Nginx, PostgreSQL</div>
+  <div class="skill"><b>Сети:</b> TCP/IP, VLAN, VPN, администрирование сетевого оборудования</div>
+  <div class="skill"><b>Базы данных и прочее:</b> SQL, Python (базовый), техническая поддержка пользователей</div>
 </section>
 
-<section>
+<section class="section">
   <h2>Опыт работы</h2>
   <div class="item">
-    <div class="head">
-      <div><h3>Специалист 1 разряда, отдел информационной безопасности и ИТ</h3>
-      <div class="org">Межрегиональная инспекция ФНС России</div></div>
-      <div class="date">Сентябрь 2026 — настоящее время</div>
-    </div>
+    <h3>Специалист 1 разряда, отдел информационной безопасности и ИТ</h3>
+    <div class="sub"><b>Межрегиональная инспекция ФНС России</b> · Сентябрь 2026 — настоящее время</div>
     <ul>
-      <li>Регистрация, классификация и устранение инцидентов ИБ: 30 инцидентов в месяц, 80&nbsp;% случаев решается без эскалации.</li>
+      <li>Регистрация, классификация и устранение инцидентов ИБ: 30 инцидентов в месяц, 80% случаев решается без эскалации.</li>
       <li>Защита конечных точек: развёртывание, настройка и обновление антивирусного ПО на 150 пользовательских машинах; контроль прав доступа в соответствии с регламентами ведомства.</li>
       <li>Подготовка и настройка рабочих мест, консультирование пользователей по безопасной работе с корпоративным ПО.</li>
     </ul>
   </div>
 </section>
 
-<section>
+<section class="section">
   <h2>Проекты</h2>
   <div class="item">
-    <div class="head"><h3>ansible-monitoring-lab — автоматизация развёртывания стенда мониторинга</h3></div>
+    <h3>ansible-monitoring-lab — автоматизация развёртывания стенда мониторинга</h3>
     <ul>
       <li>Идемпотентные Ansible-роли для Zabbix Server, Zabbix Agent2, Nginx и PostgreSQL; шаблоны Jinja2, хранение секретов в ansible-vault.</li>
       <li>Воспроизводимость: полный цикл «переустановка ОС → рабочий стенд из кода за один вечер».</li>
-      <li><a class="link" href="https://github.com/yomusfu/ansible-monitoring-lab">github.com/yomusfu/ansible-monitoring-lab</a></li>
+      <li><a href="https://github.com/yomusfu/ansible-monitoring-lab">github.com/yomusfu/ansible-monitoring-lab</a></li>
     </ul>
   </div>
   <div class="item">
-    <div class="head"><h3>zabbix_nginx_lab — кастомный мониторинг Nginx в Zabbix</h3></div>
+    <h3>zabbix_nginx_lab — кастомный мониторинг Nginx в Zabbix</h3>
     <ul>
       <li>Сбор метрик через stub_status: кастомный шаблон с 14 метриками.</li>
       <li>Обнаружение виртуальных хостов через низкоуровневое обнаружение (LLD).</li>
       <li>Триггеры с эскалацией в Telegram; корректность настроек валидирована нагрузочным тестированием.</li>
-      <li><a class="link" href="https://github.com/yomusfu/zabbix_nginx_lab">github.com/yomusfu/zabbix_nginx_lab</a></li>
+      <li><a href="https://github.com/yomusfu/zabbix_nginx_lab">github.com/yomusfu/zabbix_nginx_lab</a></li>
     </ul>
   </div>
 </section>
 
-<section>
+<section class="section">
   <h2>Образование</h2>
   <div class="item">
-    <div class="head">
-      <div><h3>Магистратура, «Безопасность технических систем» (Кибернетика и информационная безопасность)</h3>
-      <div class="org">Московский технический университет связи и информатики (МТУСИ), Москва</div></div>
-      <div class="date">2026—2029</div>
-    </div>
+    <h3>Магистратура, «Безопасность технических систем» (Кибернетика и информационная безопасность)</h3>
+    <div class="sub"><b>Московский технический университет связи и информатики (МТУСИ)</b>, Москва · 2026—2029</div>
   </div>
   <div class="item">
-    <div class="head">
-      <div><h3>Бакалавр, «Информатизация организаций» (Институт информационных технологий)</h3>
-      <div class="org">МИРЭА — Российский технологический университет, Москва</div></div>
-      <div class="date">2020—2024</div>
-    </div>
+    <h3>Бакалавр, «Информатизация организаций» (Институт информационных технологий)</h3>
+    <div class="sub"><b>МИРЭА — Российский технологический университет</b>, Москва · 2020—2024</div>
   </div>
 </section>
 
-<section>
+<section class="section">
   <h2>Дополнительно</h2>
   <ul>
     <li>Языки: русский — родной, английский — B2.</li>
@@ -159,7 +140,7 @@
   </ul>
 </section>
 
-<footer>Эренцен Нусхаев · enuskhaev@yandex.ru · github.com/yomusfu</footer>
+<footer>Эренцен Нусхаев · DevOps-инженер</footer>
 
 </div>
 </body>
