@@ -70,7 +70,12 @@
 
 <section class="section">
   <h2>Обо мне</h2>
-  <p>Специалист по ИТ и информационной безопасности, целенаправленно развиваюсь в DevOps. Строю стенды мониторинга с нуля: автоматизация развёртывания через Ansible, кастомный мониторинг Nginx в Zabbix с оповещениями в Telegram. Опыт администрирования Linux и работы с ИТ-инфраструктурой в федеральном ведомстве.</p>
+  <p>Специалист по ИТ и информационной безопасности, целенаправленно
+    развиваюсь в DevOps. Автоматизирую развёртывание инфраструктуры через
+    Ansible: мониторинговые стенды (Zabbix, Nginx, PostgreSQL) и k3s-кластер
+    из двух нод с CI-проверкой конфигурации в GitHub Actions. Опыт
+    администрирования Linux и работы с ИТ-инфраструктурой в федеральном
+    ведомстве.</p>
   <p class="muted">Ключевые проекты: <a href="https://github.com/yomusfu">github.com/yomusfu</a></p>
 </section>
 
@@ -105,6 +110,19 @@
       <li>Идемпотентные Ansible-роли для Zabbix Server, Zabbix Agent2, Nginx и PostgreSQL; шаблоны Jinja2, хранение секретов в ansible-vault.</li>
       <li>Воспроизводимость: полный цикл «переустановка ОС → рабочий стенд из кода за один вечер».</li>
       <li><a href="https://github.com/yomusfu/ansible-monitoring-lab">github.com/yomusfu/ansible-monitoring-lab</a></li>
+    </ul>
+  </div>
+  <div class="item">
+    <h3>k8s-lab — развёртывание k3s-кластера из кода</h3>
+    <ul>
+      <li>Кластер k3s из двух нод (control-plane + agent) поверх VPS:
+      идемпотентная Ansible-роль с разделением server/agent по группам
+      inventory, межнодовая сеть на wireguard-native.</li>
+      <li>CI в GitHub Actions: dry-run плейбука на каждый push, секреты
+      (IP нод) вынесены из кода в repository secrets.</li>
+      <li>Zabbix Agent2 на обеих нодах из той же роли; полный цикл
+      «чистая ОС → рабочий кластер за один прогон Ansible».</li>
+      <li><a href="https://github.com/yomusfu/k8s-lab">github.com/yomusfu/k8s-lab</a></li>
     </ul>
   </div>
   <div class="item">
